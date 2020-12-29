@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Formulario de Cuenta";
+}
+
+<form asp-controller="Cuenta" asp-action="Create" > 
+
+    <div class="form-group">
+    <label >Nombre de Usuario</label>
+    <input type="text" asp-for="nombre" class="form-control" placeholder="Nombre de Usuario" required>
+    </div>
+
+    <div class="form-group">
+    <label >Contraseña</label>
+    <textarea type="text" asp-for="contraseña" class="form-control" placeholder="Contraseña a usar" required>
+    </textarea>
+    </div>
+
+
+    
+
+    <button type="submit" class="btn btn-primary">Cargar</button>
+
+</form>
