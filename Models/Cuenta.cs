@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace PC04.Models
 {
 
-    [Table("Usuario")]
-    public class Usuario
+    [Table("Cuenta")]
+    public class Cuenta
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

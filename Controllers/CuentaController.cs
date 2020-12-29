@@ -15,6 +15,25 @@ namespace PC04.Controllers{
         private readonly ILogger<CuentaController> _logger;
          private readonly ApplicationDbContext _context;
 
+
+        public IActionResult Crear()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Create(Cuenta cuenta)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(cuenta);
+                _context.SaveChanges();
+                
+            }
+
+            return View("Confirmacion");
+        }
     }
 
 }
