@@ -29,6 +29,16 @@ namespace PC04.Controllers
             var Cuenta = _context.Cuenta.ToList();
             Imagenes Imagenes = new Imagenes();
             dynamic model = new ExpandoObject();
+            model.Comentario = Comentario;
+            model.Imagenes = Imagenes;
+            model.Cuenta = Cuenta;
+            return View(model);
+        }
+
+        public IActionResult DetalleImagen(){
+            var Cuenta = _context.Cuenta.ToList();
+            Imagenes Imagenes = new Imagenes();
+            dynamic model = new ExpandoObject();
             model.Imagenes = Imagenes;
             model.Cuenta = Cuenta;
             return View(model);
