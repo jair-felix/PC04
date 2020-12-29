@@ -1,5 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+
 
 namespace PC04.Models
 {
@@ -14,6 +19,8 @@ namespace PC04.Models
 
         [Column("imagen")]
         public string imagen { get; set; }
+
+        public ICollection<Comentario> Comentario { get; set; }
 
         
     }

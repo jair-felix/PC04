@@ -18,14 +18,20 @@ namespace PC04.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
 
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult Index(){
+            var Cuenta = _context.Cuenta.ToList();
+            Imagenes Imagenes = new Imagenes();
+            dynamic model = new ExpandoObject();
+            model.Imagenes = Imagenes;
+            model.Cuenta = Cuenta;
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

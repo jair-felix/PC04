@@ -13,8 +13,9 @@ namespace PC04.Data
             : base(options)
         {
         }
-        public DbSet<PC04.Models.Usuario> Usuario {get; set;}
+        public DbSet<PC04.Models.Cuenta> Cuenta {get; set;}
         public DbSet<PC04.Models.Imagenes> Imagenes {get; set;}
+        public DbSet<PC04.Models.Comentario> Comentario {get; set;}
        
     }
 }

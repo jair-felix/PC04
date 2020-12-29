@@ -21,6 +21,8 @@ namespace PC04.Models
         [Column("contraseña")]
         public string contraseña { get; set; }
 
+        public ICollection<Imagenes> Imagenes { get; set; }
+
     }
     
         

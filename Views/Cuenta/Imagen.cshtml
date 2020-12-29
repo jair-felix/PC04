@@ -1,0 +1,25 @@
+@model PC04.Models.Imagenes
+
+@{
+    ViewData["Title"] = "Formulario de Cuenta";
+}
+
+<form asp-controller="Cuenta" asp-action="Imagen" > 
+
+    <div class="form-group">
+    <label >Nombre de la Imagen</label>
+    <input type="text" asp-for="nombre" class="form-control" placeholder="Nombre de la Imagen" required>
+    </div>
+
+    <div class="form-group">
+    <label >Imagen a Cargar</label>
+    <textarea type="text" asp-for="contraseña" class="form-control" placeholder="Por favor Ingrese una Imagen Decente" required>
+    </textarea>
+    </div>
+
+
+    
+
+    <button type="submit" class="btn btn-primary">Cargar</button>
+
+</form>
